@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>nstudios | Shortly</title>
+  </head>
+  <body>
+    <!-- nav container -->
+    <nav class="relative container mx-auto p-6">
+      <!-- flex container for all nav items -->
+      <div class="flex items-center justify-between">
+        <!-- flex container for logo $ menu -->
+        <div class="flex items-center justify-between space-x-20">
+          <!-- logo -->
+          <img src="images/logo.svg" alt="shortly" />
+
+          <!-- nav menu -->
+          <div class="hidden space-x-8 font-bold lg:flex">
+            <a
+              href=""
+              class="text-grayishViolet hover:text-veryDarkBlue capitalize"
+              >features</a
+            >
+
+            <a
+              href=""
+              class="text-grayishViolet hover:text-veryDarkBlue capitalize"
+              >pricing</a
+            >
+
+            <a
+              href=""
+              class="text-grayishViolet hover:text-veryDarkBlue capitalize"
+              >resources</a
+            >
+          </div>
+        </div>
+
+        <!-- login/sign up nav buttons -->
+        <div
+          class="hidden items-center space-x-6 font-bold text-grayishViolet lg:flex"
+        >
+          <div class="hover:text-veryDarkViolet capitalize">log in</div>
+          <a
+            href="#"
+            class="px-8 py-3 font-bold text-white bg-cyan rounded-full hover:opacity-70 capitalize"
+            >sign up</a
+          >
+
+          <!-- @todo hamburger menu -->
+        </div>
+
+        <!-- @todo  mobile menu -->
+      </div>
+    </nav>
+
+    <!-- hero section -->
+    <section id="hero">
+      <!-- hero contianer -->
+      <div class="container flex flex-col-reverse mx-auto p-6 lg:flex-row">
+        <!-- content container -->
+        <div class="flex flex-col space-y-10 mb-44 lg:mt-18 lg:w-1/2 xl:mb-55">
+          <h1
+            class="text-5xl font-bold text-center lg:text-left lg:text-6xl lg:max-w-md"
+          >
+            More than just shorter links
+          </h1>
+          <p
+            class="text-2xl text-center text-gray-400 lg:text-left lg:max-w-md"
+          >
+            Build your brand's recognition and get detailed insights on how your
+            links are performing.
+          </p>
+
+          <div class="mx-auto lg:mx-0">
+            <a
+              href=""
+              class="px-10 py-5 font-bold text-white text-2xl bg-cyan rounded-full hover:opacity-70 lg:py-4 capitalize"
+              >get started</a
+            >
+          </div>
+        </div>
+
+        <!-- image -->
+        <div class="mx-auto mb-24 md:w-180 lg:w-1/2 lg:mb-0">
+          <img src="images/illustration-working.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- link shortner section -->
+    <section class="relative bg-gray-100">
+      <!-- link shortner container -->
+      <div id="link-shortener" class="max-w-6xl mx-auto p-6 space-y-6">
+        <form
+          id="form"
+          class="relative flex flex-col w-full p-10 -mt-20 space-y-4 bg-darkViolet rounded-lg md:flex-row md:space-y-0 md:space-x-3"
+        >
+          <input
+            id="task"
+            type="text"
+            name="task"
+            value=""
+            class="flex-1 p-3 border-2 rounded-lg placeholder-yellow-500 "
+            placeholder="Shorten a Link Here"
+          />
+
+          <input
+            type="submit"
+            value="Shorten it!"
+            class="px-10 py-3 text-white text-center bg-cyan rounded-lg hover:opacity-70 md:py-2 capitalize"
+          />
+
+          <div
+            id="validator"
+            class="absolute left-10 bottom-3 text-red text-sm italic"
+          ></div>
+        </form>
+
+        <div id="link-contain">
+          <!-- example link  -->
+          <div
+            class="flex flex-col items-center justify-between w-full p-6 mb-5 bg-white rounded-lg md:flex-row"
+          >
+            <p class="font-bold text-center text-veryDarkViolet md:text-left">
+              https://example.com/example-link
+            </p>
+
+            <div
+              class="flex flex-col items-center justify-end flex-1 space-x-4 space-y-2 md:flex-row md:space-y-0"
+            >
+              <p class="font-bold text-cyan output-url">
+                https://rel.ink/k4IKyk
+              </p>
+
+              <button
+                class="group hover:opacity-70 relative bg-darkViolet rounded text-neutral-50 duration-500 font-bold flex justify-start gap-2 items-center p-2 pr-6 focus:outline-none capitalize copy-btn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5A3.375 3.375 0 0 0 6.375 7.5H5.25m11.9-3.664A2.251 2.251 0 0 0 15 2.25h-1.5a2.251 2.251 0 0 0-2.15 1.586m5.8 0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621 0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5a9 9 0 0 0-9-9Z"
+                  />
+                </svg>
+
+                <span class="border-l-2 px-1">copy</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-10 md:justify-end">
+          <button
+            id="button"
+            class="px-10 py-2 w-full my-0 font-bold uppercase tracking-widest border-2 border-black hover:bg-darkViolet hover:text-white hover:border-darkViolet md:w-auto hidden"
+          >
+            CLEAR ALL
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
