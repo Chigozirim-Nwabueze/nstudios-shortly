@@ -18,6 +18,9 @@ addForm.addEventListener("submit", async (event) => {
   if (value === "") {
     formValidateMessage.innerText = "Please Enter Something";
     input.classList.toggle("border-red");
+  } else if (!validURL(value)) {
+    formValidateMessage.innerText =
+      "This is not a Valid Url, Please Enter a Valid Url";
   } else {
     try {
       const shortenedLink = await shortenUrl(value);
@@ -323,4 +326,16 @@ function clearStoredLinks() {
   console.log("Stored links cleared from local storage!");
 }
 
-function checkUrl() {}
+// Validates a URL
+function validURL(str) {
+  var pattern = new RegExp(
+    "^(https?:\\/\\/)?" + // protocol
+      "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" +
+      "((\\d{1,3}\\.){3}\\d{1,3}))" +
+      "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" +
+      "(\\?[;&a-z\\d%_.~+=-]*)?" +
+      "(\\#[-a-z\\d_]*)?$",
+    "i"
+  );
+  return !!pattern.test(str);
+}
